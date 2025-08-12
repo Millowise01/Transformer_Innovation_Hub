@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Transformer Innovation Hub</title>
+    <link rel="stylesheet" href="Cart Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="TIH-Logo.png" alt="Transformer Innovation Hub Logo">
+                <span class="brand-name">Transformer Innovation Hub</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About Us.html">About</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="Cart.html">Cart</a></li>
+                    <li><a href="Checkout.html">Checkout</a></li>
+                    <li><a href="Community.html">Community</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Contact Us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="Cart.html" title="View Cart"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="login.html" title="User Account"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Your Shopping Cart</h1>
+        </section>
+
+<!DOCTYPE html>
+        <div class="cart-container">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" align="right">Subtotal:</td>
+                        <td id="cart-subtotal">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="right">
+                            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+                        </td>
+                        <td>
+                            <a href="Checkout.html" class="checkout-btn">Proceed to Checkout</a>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Transformer Innovation Hub. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="Contact Us.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        //  You would replace this with actual cart logic using local storage or a backend
+        function loadCart() {
+            const cartItems = document.getElementById('cart-items');
+            const subtotalEl = document.getElementById('cart-subtotal');
+
+            cartItems.innerHTML = ''; // Clear existing items
+            let subtotal = 0;
+
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];  // Example: Get cart from local storage
+
+            cart.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>$${item.price}</td>
+                    <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+                    <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                    <td><button onclick="removeItem(${index})">Remove</button></td>
+                `;
+                cartItems.appendChild(row);
+                subtotal += item.price * item.quantity;
+            });
+
+            if (subtotalEl) {
+                subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+            }
+
+            updateCartCount();
+        }
+
+        function updateQuantity(index, value) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (value < 1) value = 1;
+            cart[index].quantity = parseInt(value);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function clearCart() {
+            if (confirm('Are you sure you want to clear your cart?')) {
+                localStorage.removeItem('cart');
+                loadCart();
+            }
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                cartCount.textContent = count;
+                if (count > 0) {
+                    cartCount.classList.add('active');
+                } else {
+                    cartCount.classList.remove('active');
+                }
+            }
+        }
+
+        window.addEventListener('load', loadCart);
+    </script>
+</body>
+</html>

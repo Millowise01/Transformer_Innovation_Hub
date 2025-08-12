@@ -1,0 +1,300 @@
+/* You can copy the below code to Events Styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Header Styles - Copy from Index Styles */
+header {
+    background: #fff;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .brand-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #e67e22;
+}
+
+header .icons {
+    display: flex;
+    align-items: center;
+}
+
+header .icons a {
+    color: #555;
+    margin-left: 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .icons a:hover {
+    color: #e67e22;
+}
+
+header .cart-count {
+    background-color: #c0392b;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    vertical-align: super;
+}
+
+/* Events Specific Styles */
+
+.events-hero {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 100px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    background-image: url('events-hero-background.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.events-hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.events-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.events-hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+
+#training-programs {
+    background: #a37103;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+#workshops {
+    background: #fff;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+#conferences {
+    background: #4e6d06;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+#conferences h2,
+#workshops h2,
+#training-programs h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.conference,
+.workshop,
+.training {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.conference:last-child,
+.workshop:last-child,
+.training:last-child {
+    border-bottom: none;
+}
+
+.conference h3,
+.workshop h3,
+.training h3 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.workshop p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+.conference p {
+    color: #fffefe;
+    font-size: 1.1em;
+}
+
+.training p {
+    color: #fff9f9;
+    font-size: 1.1em;
+}
+
+.event-date,
+.event-duration {
+    font-size: 1em;
+    color: #fffefe;
+    margin-top: 10px;
+}
+
+/* Footer Styles - Copy from Index Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #e67e22;
+}
+
+/* Media Queries for Responsiveness - Copy from Index Styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .events-hero {
+        padding: 80px 0;
+    }
+
+    .events-hero h1 {
+        font-size: 2em;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+    }
+
+    footer .footer-links {
+        margin-top: 10px;
+    }
+}
+
+.event-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.event-details {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.event-details p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #e67e22;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #d35400;
+}
+
+.event-item.show-details .event-details {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}

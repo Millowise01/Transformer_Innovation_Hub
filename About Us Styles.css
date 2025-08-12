@@ -1,0 +1,275 @@
+/* You can copy the below code to About Us Styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Header Styles - Copy from Index Styles */
+header {
+    background: #fff;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .brand-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #8b7562;
+}
+
+header .icons {
+    display: flex;
+    align-items: center;
+}
+
+header .icons a {
+    color: #555;
+    margin-left: 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .icons a:hover {
+    color: #e67e22;
+}
+
+header .cart-count {
+    background-color: #c0392b;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    vertical-align: super;
+}
+
+/* About Us Specific Styles */
+
+.about-hero {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 100px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    background-image: url('about-us-background.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Ensure text is visible on the background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional text shadow for better readability */
+}
+
+.about-hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.about-mission,
+.about-vision {
+    background: #bb5a199c;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+.about-mission h2,
+.about-vision h2,
+.about-team h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-mission p,
+.about-vision p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+}
+
+.about-team {
+    background: #f9f9f9;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h4 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Footer Styles - Copy from Index Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #e67e22;
+}
+
+/* Media Queries for Responsiveness - Copy from Index Styles and Adapt */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .about-hero {
+        padding: 80px 0;
+    }
+
+    .about-hero h1 {
+        font-size: 2em;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+    }
+
+    footer .footer-links {
+        margin-top: 10px;
+    }
+}
+
+.team-member {
+    cursor: pointer; /* Indicate it's clickable */
+    position: relative; /* For positioning the bio */
+    overflow: hidden; /* Hide overflowing bio initially */
+}
+
+.team-bio {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    position: absolute;
+    top: 100%; /* Initially hidden below the team member */
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Initially transparent */
+    visibility: hidden; /* Initially hidden */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.team-bio p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.team-member.show-bio .team-bio {
+    top: 0; /* Show the bio */
+    opacity: 1; /* Make it visible */
+    visibility: visible;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Transformer Innovation Hub</title>
+    <link rel="stylesheet" href="Shop Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="TIH-Logo.png" alt="Transformer Innovation Hub Logo">
+                <span class="brand-name">Transformer Innovation Hub</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="cart.html" title="View Cart"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="login.html" title="User Account"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-hero">
+            <div class="shop-hero-container">
+                <h1>Our Products</h1>
+                <p>Discover unique art pieces made from recycled materials</p>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="wood">Wood</option>
+                        <option value="plastic">Plastic</option>
+                        <option value="painting">Painting</option>
+                        <option value="recycled">Recycled</option>
+                        <option value="metal">Metal</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-filter">Price Range:</label>
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="0-50">$0 - $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100-200">$100 - $200</option>
+                        <option value="200-500">$200 - $500</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-filter">Sort By:</label>
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price (Low to High)</option>
+                        <option value="price-high">Price (High to Low)</option>
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-categories">
+            <div class="section-header">
+                <h2>Featured Categories</h2>
+            </div>
+
+            <div class="categories-container">
+                <div class="category-card">
+                    <img src="wood.jpg" alt="Wood Crafts">
+                    <h3>Wood Crafts</h3>
+                    <a href="#">Wood Crafts <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card">
+                    <img src="plastic.jpg" alt="Recycled Plastic Art">
+                    <h3>Recycled Plastic Art</h3>
+                    <a href="#">Plastic Art <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card">
+                    <img src="item3.jpg" alt="Paintings">
+                    <h3>Paintings</h3>
+                    <a href="#">Paintings <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="category-card">
+                    <img src="item6.jpg" alt="Glass Sculptures">
+                    <h3>Glass Sculptures</h3>
+                    <a href="#">Glass Sculptures <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                    <!DOCTYPE html>
+                <div class="category-card">
+                    <img src="Light1.jpg" alt="Bottles Light">
+                    <h3>Bottles Light</h3>
+                    <a href="#">Bottles Light <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-grid">
+            <div class="product-card" data-product-id="1">
+                <img src="item1.jpg" alt="Cardbord Sculpture">
+                <h3>Cardbord Sculpture</h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="price">$45.00</p>
+                <div class="product-actions">
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                    <a href="#" class="quick-view-btn" data-product-id="1">Quick View</a>
+                </div>
+            </div>
+            <div class="product-card" data-product-id="2">
+                <img src="item2.jpg" alt="Drawing">
+                <h3>Drawing</h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="price">$120.00</p>
+                <div class="product-actions">
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                    <a href="#" class="quick-view-btn" data-product-id="2">Quick View</a>
+                </div>
+            </div>
+            <div class="product-card" data-product-id="3">
+                <img src="item3.jpg" alt="Abstract Painting on Canvas">
+                <h3>Abstract Painting on Canvas</h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$85.00</p>
+                <div class="product-actions">
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                    <a href="#" class="quick-view-btn" data-product-id="3">Quick View</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="pagination">
+            <a href="#" class="page-number active">1</a>
+            <a href="#" class="page-number">2</a>
+            <a href="#" class="page-number">3</a>
+            <a href="#" class="page-number next">Next</a>
+        </section>
+
+        <section class="shop-banners">
+            <div class="shop-banner">
+                <div class="banner-content">
+                    <h2>Limited Time Offer</h2>
+                    <p>Get 20% off on all recycled art pieces.</p>
+                    <a href="#" class="shop-button">Shop Now</a>
+                </div>
+            </div>
+            <div class="shop-banner">
+                <div class="banner-content">
+                    <h2>Support Local Artists</h2>
+                    <p>Discover unique creations and support the community.</p>
+                    <a href="#" class="shop-button">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Transformer Innovation Hub. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-product-details">
+                </div>
+        </div>
+    </div>
+
+    <script src="Shop script.js"></script>
+</body>
+
+</html>
