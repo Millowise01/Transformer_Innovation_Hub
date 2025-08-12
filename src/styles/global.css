@@ -1,0 +1,162 @@
+/* Global styles converted from global-fancy.css */
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto 4rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(99,102,241,0.08);
+  padding: 2rem;
+}
+
+.button {
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #fbbf24 0%, #6366f1 100%);
+  color: #222;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #6366f1 0%, #60a5fa 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: #fbbf24;
+  color: #222;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background: #f59e0b;
+}
+
+/* Grid layouts */
+.impact-grid, .highlight-grid, .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.impact-item, .highlight-box, .testimonial {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.impact-item i, .highlight-box i {
+  font-size: 3rem;
+  color: #6366f1;
+  margin-bottom: 1rem;
+}
+
+.section-header {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #6366f1;
+}
+
+/* Call to action */
+.call-to-action {
+  background: linear-gradient(135deg, #60a5fa 0%, #6366f1 100%);
+  color: white;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 16px;
+  margin: 3rem 0;
+}
+
+.join-button {
+  background: #fbbf24;
+  color: #222;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #f8fafc;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 16px;
+  margin: 3rem 0;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 300px;
+}
+
+.newsletter-form button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #6366f1;
+  margin-top: 1rem;
+}
